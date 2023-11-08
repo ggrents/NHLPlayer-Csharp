@@ -1,4 +1,5 @@
-﻿using NHL_Player.Factory;
+﻿using NHL_Player.Decorator;
+using NHL_Player.Factory;
 using NHL_Player.Models;
 using NHL_Player.Strategy;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NHL_Player
 {
-    public class Application
+    public class Utilites
     {
         public static void CreateHockeyPlayer()
         {
@@ -69,60 +70,24 @@ namespace NHL_Player
                 HockeyPlayer newPlayer = playerFactory.CreatePlayer(name, surname, nationality, height, weight, rating, age);
 
 
-                PlayerService.AddPlayer(newPlayer.Name, newPlayer.Surname, newPlayer.Nationality,
+                var _player = PlayerService.AddPlayer(newPlayer.Name, newPlayer.Surname, newPlayer.Nationality,
                     newPlayer.Height, newPlayer.Weight, newPlayer.Rating, newPlayer.Age, newPlayer.Position);
 
-                ApplyTactic(newPlayer);
+                Tools.ApplyTactic(newPlayer);
+                Tools.ChooseHand(_player);
 
-               
+
+
             }
         }
 
-       public static void DisplayHockeyPlayers()
+        public static void DisplayHockeyPlayers()
         {
 
             PlayerService.DisplayPlayers();
         }
 
-        private static void ApplyTactic(HockeyPlayer newPlayer) 
-        {
-            Console.WriteLine("Choose the tactic:");
-            Console.WriteLine("1. Pressure");
-            Console.WriteLine("2. Shooting");
-            Console.WriteLine("3. Defense");
-            var userInput = Console.ReadLine();
-            if (userInput == "1")
-            {
-
-                newPlayer.ChangeStrategy(new PressureStrategy());
-                Console.Write($"Player {newPlayer.Name} will");
-                newPlayer.Play();
-            }
-            if (userInput == "2")
-            {
-
-                newPlayer.ChangeStrategy(new ShotStrategy());
-                Console.Write($"Player {newPlayer.Name} will");
-                newPlayer.Play();
-            }
-            if (userInput == "3")
-            {
-
-                newPlayer.ChangeStrategy(new DefenseStrategy());
-                Console.Write($"Player {newPlayer.Name} will");
-                newPlayer.Play();
-            }
-
-
-            //else
-            //{
-            //    Console.WriteLine("Invalid choice. Exiting...");
-            //}
-
-
-
-        }
-
+     
 
     }
 }

@@ -11,7 +11,7 @@ namespace NHL_Player
             {
                 Console.WriteLine("Choose an action:");
                 Console.WriteLine("1. Create a hockey player");
-                Console.WriteLine("2. Display hockey players");
+                Console.WriteLine("2. Display  hockey players");
                 Console.WriteLine("3. Exit");
 
                 string userInput = Console.ReadLine();
@@ -19,11 +19,11 @@ namespace NHL_Player
                 switch (userInput)
                 {
                     case "1":
-                        Application.CreateHockeyPlayer();
+                        Utilites.CreateHockeyPlayer();
                        
                         break;
                     case "2":
-                        Application.DisplayHockeyPlayers();
+                        Utilites.DisplayHockeyPlayers();
                         break;
                     case "3":
                         Environment.Exit(0);

@@ -10,7 +10,7 @@ namespace NHL_Player
 {
     public static class PlayerService 
     {
-        public static void AddPlayer(string name, string surname, string nationality, float height, float weight, int rating, int age, string position)
+        public static HockeyPlayer AddPlayer(string name, string surname, string nationality, float height, float weight, int rating, int age, string position)
         {
             using (var dbContext = new HockeyDbContext())
             {
@@ -24,12 +24,14 @@ namespace NHL_Player
                     Weight = weight,
                     Rating = rating,
                     Age = age,
-                    Position = position
+                    Position = position,
+                    Hand = false
                 };
                 dbContext.Players.Add(player);
 
                 dbContext.SaveChanges();
                 Console.WriteLine($"Player {name} created successfully!");
+                return player;
 
 
             }
@@ -44,7 +46,30 @@ namespace NHL_Player
                 var players = dbContext.Players.ToList();
                 foreach (var player in players)
                 {
-                    Console.WriteLine($"Name: {player.Name}, Surname: {player.Surname}, Nationality: {player.Nationality}, Rating: {player.Rating}");
+                    string handText = player.Hand ? "right-handed" : "left-handed";
+                    Console.WriteLine($"Id: {player.Id}, {player.Name} {player.Surname}, " +
+                        $"Nationality: {player.Nationality}, Rating: {player.Rating}, {handText}");
+                }
+            }
+        }
+
+        public static void UpdatePlayerHand(int id, bool handValue)
+        {
+            using (var dbContext = new HockeyDbContext())
+            {
+                var player = dbContext.Players.Find(id);
+
+                if (player != null)
+                {
+                    player.Hand = handValue;
+
+                    dbContext.SaveChanges();
+
+                   
+                }
+                else
+                {
+                    Console.WriteLine($"Player with ID {id} not found!");
                 }
             }
         }

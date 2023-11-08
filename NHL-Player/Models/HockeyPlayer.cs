@@ -23,6 +23,8 @@ namespace NHL_Player.Models
         public int Rating { get; set; }
         public int Age { get; set; }
         public string Position { get; set; }
+        public bool Hand { get; set; }
+            
 
         public HockeyPlayer(IPlayerStrategy strategy)
         {
@@ -57,6 +59,7 @@ namespace NHL_Player.Models
             this.Rating = rating;
             this.Age = age;
             this.Position = position;
+            this.Hand = false;
         }
 
       
