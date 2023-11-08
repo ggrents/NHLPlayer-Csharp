@@ -30,38 +30,6 @@ namespace NHL_Player.Models
 
         public static DatabaseConnection Instance => instance.Value;
 
-        public void CreatePlayer(string name, string nationality, float height, float weight, int rating, int age)
-        {
-            using (var dbContext = HockeyDbContext.Instance)
-            {
-                dbContext.Players.Add(new HockeyPlayer
-                {
-                    Name = name,
-                    Nationality = nationality,
-                    Height = height,
-                    Weight = weight,
-                    Rating = rating,
-                    Age = age
-                });
-
-                dbContext.SaveChanges();
-
-                Console.WriteLine($"Player {name} created successfully!");
-            }
-        }
-
-        public void DisplayPlayers()
-        {
-            using (var dbContext = HockeyDbContext.Instance)
-            {
-                Console.WriteLine("List of Hockey Players:");
-
-                var players = dbContext.Players.ToList();
-                foreach (var player in players)
-                {
-                    Console.WriteLine($"Name: {player.Name}, Nationality: {player.Nationality}, Rating: {player.Rating}");
-                }
-            }
-        }
+       
     }
 }

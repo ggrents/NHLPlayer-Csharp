@@ -9,6 +9,6 @@ namespace NHL_Player.Factory
 {
     public interface IHockeyPlayerFactory
     {
-        HockeyPlayer CreatePlayer(string name, string nationality, float height, float weight, int rating, int age, string position);
+        HockeyPlayer CreatePlayer(string name, string surname, string nationality, float height, float weight, int rating, int age);
     }
 }
