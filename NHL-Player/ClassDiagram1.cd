@@ -1,88 +1,131 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="NHL_Player.Models.HockeyPlayer">
-    <Position X="2.25" Y="0.75" Width="1.5" />
+  <Class Name="NHL_Player.Adapter.HockeyPlayerAdapter" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAABCAAAAAwCEAAAAQABCAAAAEAgAAAAAAACAA=</HashCode>
-      <FileName>Models\HockeyPlayer.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAAAAIAAAAAAAAAAIAAAAAAAgAAA=</HashCode>
+      <FileName>Adapter\HockeyPlayerAdapter.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_strategy" />
-    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="NHL_Player.Models.HockeyDbContext">
-    <Position X="12" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAABgAAAAQAAAAAAAAAA=</HashCode>
-      <FileName>Models\HockeyDbContext.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="NHL_Player.Decorator.RightHandDecorator">
-    <Position X="7.75" Y="0.5" Width="1.5" />
+  <Class Name="NHL_Player.Decorator.RightHandDecorator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorator\RigthHandDecorator.cs</FileName>
       <NewMemberFileName>Decorator\LeftHandDecorator.cs</NewMemberFileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="NHL_Player.Strategy.DefenseStrategy">
-    <Position X="9.5" Y="4.25" Width="1.5" />
+  <Class Name="NHL_Player.Decorator.LeftHandDecorator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Decorator\LeftHandDecorator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.3" Collapsed="true" />
+  </Class>
+  <Class Name="NHL_Player.Factory.Forward" Collapsed="true">
+    <Position X="1.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\ConcreteProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NHL_Player.Factory.Defense" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\ConcreteProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NHL_Player.Factory.Goalie" Collapsed="true">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\ConcreteProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NHL_Player.Factory.ForwardFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\ConcreteCreators.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="NHL_Player.Factory.DefenseFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\ConcreteCreators.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="NHL_Player.Factory.GoalieFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\ConcreteCreators.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="NHL_Player.Models.HockeyPlayer" Collapsed="true">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABCAAAAAwCEAAAAQABCAAAAEAgAAAAAAACAA=</HashCode>
+      <FileName>Models\HockeyPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NHL_Player.Strategy.DefenseStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Strategy\DefenseStrategy.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="NHL_Player.Strategy.PressureStrategy">
-    <Position X="7.5" Y="4.25" Width="1.5" />
+  <Class Name="NHL_Player.Strategy.PressureStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="5.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Strategy\PressureStrategy.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="NHL_Player.Strategy.ShotStrategy">
-    <Position X="5.25" Y="4.25" Width="1.5" />
+  <Class Name="NHL_Player.Strategy.ShotStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Strategy\ShotStrategy.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="1.042" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="NHL_Player.Factory.Forward">
-    <Position X="11.75" Y="7.5" Width="1.5" />
+  <Interface Name="NHL_Player.Decorator.IHandDecorator" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Factory\ConcreteProducts.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="NHL_Player.Factory.Defense">
-    <Position X="8" Y="7.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Factory\ConcreteProducts.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="NHL_Player.Factory.Goalie">
-    <Position X="5.25" Y="7.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Factory\ConcreteProducts.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Interface Name="NHL_Player.Strategy.IPlayerStrategy">
-    <Position X="8.25" Y="2.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Strategy\IPlayerStrategy.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorator\IHandDecorator.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="NHL_Player.Factory.IHockeyPlayerFactory">
-    <Position X="7.75" Y="5.75" Width="1.5" />
+  <Interface Name="NHL_Player.Factory.IHockeyPlayerFactory" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factory\Creator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NHL_Player.Strategy.IPlayerStrategy" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Strategy\IPlayerStrategy.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

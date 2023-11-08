@@ -1,4 +1,5 @@
 ﻿using NHL_Player.Models;
+using NHL_Player.Adapter;
 using NHL_Player.Strategy;
 using System;
 using System.Collections.Generic;
@@ -46,9 +47,9 @@ namespace NHL_Player
                 var players = dbContext.Players.ToList();
                 foreach (var player in players)
                 {
-                    string handText = player.Hand ? "right-handed" : "left-handed";
-                    Console.WriteLine($"Id: {player.Id}, {player.Name} {player.Surname}, " +
-                        $"Nationality: {player.Nationality}, Rating: {player.Rating}, {handText}");
+                    IPlayerInfo adapter = new HockeyPlayerAdapter(player);
+                    Console.WriteLine($"Id: {adapter.GetPlayerId()}, {adapter.GetFullName()}, " +
+                        $"Nationality: {player.Nationality}, Rating: {player.Rating}, {adapter.GripHand()}");
                 }
             }
         }

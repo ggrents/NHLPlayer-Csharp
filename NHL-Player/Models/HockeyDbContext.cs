@@ -17,7 +17,7 @@ namespace NHL_Player.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // подключение к дб
+            
             optionsBuilder.UseNpgsql("Host=localhost;Database=NHL;Username=postgres;Password=2996");
         }
     }
