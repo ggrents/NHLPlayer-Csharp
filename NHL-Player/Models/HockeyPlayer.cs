@@ -1,4 +1,5 @@
 ﻿using Azure;
+using NHL_Player.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace NHL_Player.Models
 {
     public class HockeyPlayer
     {
+
+        private IPlayerStrategy _strategy;
+
+        
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -18,6 +23,24 @@ namespace NHL_Player.Models
         public int Rating { get; set; }
         public int Age { get; set; }
         public string Position { get; set; }
+
+        public HockeyPlayer(IPlayerStrategy strategy)
+        {
+            _strategy = strategy;
+        }
+
+        public void Play()
+        {
+            _strategy.FollowTactic();
+        }
+
+        
+        public void ChangeStrategy(IPlayerStrategy newStrategy)
+        {
+            _strategy = newStrategy;
+        }
+
+
 
         public HockeyPlayer()
         {

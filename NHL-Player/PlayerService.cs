@@ -1,4 +1,5 @@
 ﻿using NHL_Player.Models;
+using NHL_Player.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace NHL_Player
 {
-    public static class PlayerService
+    public static class PlayerService 
     {
         public static void AddPlayer(string name, string surname, string nationality, float height, float weight, int rating, int age, string position)
         {
             using (var dbContext = new HockeyDbContext())
             {
-                dbContext.Players.Add(new HockeyPlayer
+
+                var player = new HockeyPlayer
                 {
                     Name = name,
                     Surname = surname,
@@ -23,11 +25,13 @@ namespace NHL_Player
                     Rating = rating,
                     Age = age,
                     Position = position
-                });
+                };
+                dbContext.Players.Add(player);
 
                 dbContext.SaveChanges();
-
                 Console.WriteLine($"Player {name} created successfully!");
+
+
             }
         }
 

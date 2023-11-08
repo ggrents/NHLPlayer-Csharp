@@ -20,6 +20,7 @@ namespace NHL_Player
                 {
                     case "1":
                         Application.CreateHockeyPlayer();
+                       
                         break;
                     case "2":
                         Application.DisplayHockeyPlayers();
