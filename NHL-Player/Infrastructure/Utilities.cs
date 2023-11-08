@@ -1,7 +1,9 @@
-﻿using NHL_Player.Decorator;
+﻿using NHL_Player.Adapter;
+using NHL_Player.Decorator;
 using NHL_Player.Factory;
 using NHL_Player.Models;
 using NHL_Player.Strategy;
+using NHL_Player.Observer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -87,6 +89,26 @@ namespace NHL_Player
             PlayerService.DisplayPlayers();
         }
 
+        public static void Notify()
+        {
+            var _players = PlayerService.GetAllPlayers();
+            IObservable publisher = new Publisher();
+            foreach (var player in _players)
+            {
+                Subscriber subscriber = new Subscriber();
+                subscriber._player = player;
+                publisher.AddObserver(subscriber);
+
+            }
+            Console.WriteLine("Enter your name: ");
+            var coachName = Console.ReadLine();
+
+            Console.WriteLine("Specify the training details: ");
+            var details = Console.ReadLine();
+         
+            publisher.NewTraining(coachName, details);
+
+        }
      
 
     }

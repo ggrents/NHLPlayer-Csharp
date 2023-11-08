@@ -7,7 +7,7 @@ using NHL_Player;
 
 namespace NHL_Player.Adapter
 {
-    public interface IPlayerInfo
+    public interface IHockeyPlayerInfo
     {
         int GetPlayerId();
         string GetFullName();

@@ -11,8 +11,9 @@ namespace NHL_Player
             {
                 Console.WriteLine("Choose an action:");
                 Console.WriteLine("1. Create a hockey player");
-                Console.WriteLine("2. Display  hockey players");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("2. Display hockey players");
+                Console.WriteLine("3. Notify about the training");
+                Console.WriteLine("4. Exit");
 
                 string userInput = Console.ReadLine();
 
@@ -26,6 +27,9 @@ namespace NHL_Player
                         Utilites.DisplayHockeyPlayers();
                         break;
                     case "3":
+                        Utilites.Notify();
+                        break;
+                    case "4":
                         Environment.Exit(0);
                         break;
                     default:

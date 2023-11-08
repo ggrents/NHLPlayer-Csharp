@@ -40,19 +40,30 @@ namespace NHL_Player
 
         public static void DisplayPlayers()
         {
-            using (var dbContext = HockeyDbContext.Instance)
+            using (var dbContext = new HockeyDbContext())
             {
                 Console.WriteLine("List of Hockey Players:");
 
                 var players = dbContext.Players.ToList();
                 foreach (var player in players)
                 {
-                    IPlayerInfo adapter = new HockeyPlayerAdapter(player);
+                    IHockeyPlayerInfo adapter = new HockeyPlayerAdapter(player);
                     Console.WriteLine($"Id: {adapter.GetPlayerId()}, {adapter.GetFullName()}, " +
                         $"Nationality: {player.Nationality}, Rating: {player.Rating}, {adapter.GripHand()}");
                 }
             }
         }
+
+        public static List<HockeyPlayer> GetAllPlayers()
+        {
+            using (var dbContext = new HockeyDbContext())
+            {
+               
+
+                var players = dbContext.Players.ToList();
+                return players;
+            }
+        } 
 
         public static void UpdatePlayerHand(int id, bool handValue)
         {
