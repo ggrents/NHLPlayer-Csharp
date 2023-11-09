@@ -25,6 +25,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 <p align="center">
       <img src="https://sun9-34.userapi.com/impg/TguDBD8t94ZlIQ9EqAoFh0vqauUbno04vTrrog/yXKyWY5oT54.jpg?size=1829x921&quality=96&sign=b9c605e41c11b59ae10c8119cbc505d5&type=album" height = "600" width="1200">
 </p>
+
 ###  Decorator Pattern
 
 - The decorator pattern is implemented to modify the grip of hockey players.
