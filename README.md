@@ -14,7 +14,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 - public static HockeyDbContext Instance => instance.Value; is a static property that provides a single instance of HockeyDbContext.
 - When the Instance is accessed for the first time, the HockeyDbContext object will be created and saved in Lazy<HockeyDbContext>.
 <p align="center">
-      <img src="https://sun9-62.userapi.com/impg/sRdYJye6VUCyLNjfGqpSKjbJRGcXJaDHQsYZQw/74dq2fYkRyA.jpg?size=1253x528&quality=96&sign=370d771f11b4f174a30980059afd16de&type=album" height = "400" width="600">
+      <img src="https://sun9-62.userapi.com/impg/sRdYJye6VUCyLNjfGqpSKjbJRGcXJaDHQsYZQw/74dq2fYkRyA.jpg?size=1253x528&quality=96&sign=370d771f11b4f174a30980059afd16de&type=album" height = "700" width="1200">
 </p>
 
 ### Factory Pattern
@@ -23,7 +23,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 - The Creator is the IHockeyPlayerFactory interface, which has a createPlayer method. This method is implemented by Forward Factory, Defense Factory and GoalieFactory(Concrete Creators).
 - The role of Concrete Products is inherited from the common Player class - Forward, Defense and Goalie
 <p align="center">
-      <img src="https://sun9-34.userapi.com/impg/TguDBD8t94ZlIQ9EqAoFh0vqauUbno04vTrrog/yXKyWY5oT54.jpg?size=1829x921&quality=96&sign=b9c605e41c11b59ae10c8119cbc505d5&type=album" height = "400" width="600">
+      <img src="https://sun9-34.userapi.com/impg/TguDBD8t94ZlIQ9EqAoFh0vqauUbno04vTrrog/yXKyWY5oT54.jpg?size=1829x921&quality=96&sign=b9c605e41c11b59ae10c8119cbc505d5&type=album" height = "900" width="1200">
 </p>
 ### Decorator Pattern
 
@@ -31,7 +31,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 -  Classes implementing the decorator interface take Hockey Player into the constructor of the class and apply the SetHand method to it, which changes the value in the database.
 
 <p align="center">
-      <img src="https://sun9-62.userapi.com/impg/gi1nqFyCcfkRMkXvww7XQfas-W3p8MCIOXqOBQ/C_0-b9Cwepg.jpg?size=1787x670&quality=96&sign=808641b43298abe3777f2674bbfe30ab&type=album" height = "400" width="600">
+      <img src="https://sun9-62.userapi.com/impg/gi1nqFyCcfkRMkXvww7XQfas-W3p8MCIOXqOBQ/C_0-b9Cwepg.jpg?size=1787x670&quality=96&sign=808641b43298abe3777f2674bbfe30ab&type=album" height = "800" width="1200">
       <img src="https://sun9-68.userapi.com/impg/v9dCubVYAh-zpfJrs596geW9ShI3RC6HUjnNcg/9MSXyRLoQGs.jpg?size=985x551&quality=96&sign=df4678ccb74fffc6c14fd3f5d9b4c5c7&type=album" height = "400" width="600">
 </p>
 
