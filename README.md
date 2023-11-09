@@ -23,7 +23,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 - The Creator is the IHockeyPlayerFactory interface, which has a createPlayer method. This method is implemented by Forward Factory, Defense Factory and GoalieFactory(Concrete Creators).
 - The role of Concrete Products is inherited from the common Player class - Forward, Defense and Goalie
 <p align="center">
-      <img src="https://sun9-34.userapi.com/impg/TguDBD8t94ZlIQ9EqAoFh0vqauUbno04vTrrog/yXKyWY5oT54.jpg?size=1829x921&quality=96&sign=b9c605e41c11b59ae10c8119cbc505d5&type=album" height = "900" width="1200">
+      <img src="https://sun9-34.userapi.com/impg/TguDBD8t94ZlIQ9EqAoFh0vqauUbno04vTrrog/yXKyWY5oT54.jpg?size=1829x921&quality=96&sign=b9c605e41c11b59ae10c8119cbc505d5&type=album" height = "600" width="1200">
 </p>
 ### Decorator Pattern
 
@@ -31,7 +31,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 -  Classes implementing the decorator interface take Hockey Player into the constructor of the class and apply the SetHand method to it, which changes the value in the database.
 
 <p align="center">
-      <img src="https://sun9-62.userapi.com/impg/gi1nqFyCcfkRMkXvww7XQfas-W3p8MCIOXqOBQ/C_0-b9Cwepg.jpg?size=1787x670&quality=96&sign=808641b43298abe3777f2674bbfe30ab&type=album" height = "800" width="1200">
+      <img src="https://sun9-62.userapi.com/impg/gi1nqFyCcfkRMkXvww7XQfas-W3p8MCIOXqOBQ/C_0-b9Cwepg.jpg?size=1787x670&quality=96&sign=808641b43298abe3777f2674bbfe30ab&type=album" height = "600" width="1200">
       <img src="https://sun9-68.userapi.com/impg/v9dCubVYAh-zpfJrs596geW9ShI3RC6HUjnNcg/9MSXyRLoQGs.jpg?size=985x551&quality=96&sign=df4678ccb74fffc6c14fd3f5d9b4c5c7&type=album" height = "400" width="600">
 </p>
 
@@ -42,7 +42,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 - This pattern is implemented in the Hockey Player Adapter class, by aggregation.
 - I have implemented a base class in the adapter class to call methods from the HockeyPlayer class
   <p align="center">
-      <img src="https://sun9-37.userapi.com/impg/AVdy5wKbJL7rZds_MSQkqLYAo2ABEGEZLl2gPA/RySVxWhhjHw.jpg?size=1091x697&quality=96&sign=86f646ea33c3beccfd95610712cc8613&type=album" height = "400" width="600">
+      <img src="https://sun9-37.userapi.com/impg/AVdy5wKbJL7rZds_MSQkqLYAo2ABEGEZLl2gPA/RySVxWhhjHw.jpg?size=1091x697&quality=96&sign=86f646ea33c3beccfd95610712cc8613&type=album" height = "600" width="1200">
 </p>
 
 ### Strategy Pattern
@@ -51,7 +51,7 @@ It implements various design patterns to provide flexibility, extensibility, and
 - The Hockey Player class has a private iPlayer Strategy _strategy field.
 -  I created three classes implementing one interface with the Follow Tactic method, so the Hockey Player class can call its method without thinking about which strategy was applied.
   <p align="center">
-      <img src="https://sun9-27.userapi.com/impg/8KZDJIy0UMk-dwrAS84dQQ6S0AcWSp6AkYJy9g/P5FxcTGkk5s.jpg?size=425x202&quality=96&sign=5a9366e40dc53fd02478ee1611d791cf&type=album" height = "400" width="600">
+      <img src="https://sun9-27.userapi.com/impg/8KZDJIy0UMk-dwrAS84dQQ6S0AcWSp6AkYJy9g/P5FxcTGkk5s.jpg?size=425x202&quality=96&sign=5a9366e40dc53fd02478ee1611d791cf&type=album" height = "600" width="1200">
 </p>
 
 ### Observer Pattern
@@ -61,8 +61,8 @@ It implements various design patterns to provide flexibility, extensibility, and
 - The publisher implements the IObservable interface which has methods for working with subscribers.
 - We can notify all players, specify the name of the coach and details.
   <p align="center">
-      <img src="https://sun9-76.userapi.com/impg/Z13Pwx8F9MyapNqwSdBtavyfeEHRa2EJIFoPQw/LB92aXINjw8.jpg?size=1477x425&quality=96&sign=22ffdfd94e988f74cdcf1f2b103f8bfa&type=album" height = "400" width="600">
-      <img src="https://sun9-3.userapi.com/impg/3s_N_RNJj3GLdK2TISVwxII8NniV2kk4Ygx6Zg/p9xoahiUc_8.jpg?size=982x206&quality=96&sign=8c1fd67bc4cc94d1b8fc6097fe4db41c&type=album" height = "400" width="600">
+      <img src="https://sun9-76.userapi.com/impg/Z13Pwx8F9MyapNqwSdBtavyfeEHRa2EJIFoPQw/LB92aXINjw8.jpg?size=1477x425&quality=96&sign=22ffdfd94e988f74cdcf1f2b103f8bfa&type=album" height = "600" width="1200">
+      <img src="https://sun9-3.userapi.com/impg/3s_N_RNJj3GLdK2TISVwxII8NniV2kk4Ygx6Zg/p9xoahiUc_8.jpg?size=982x206&quality=96&sign=8c1fd67bc4cc94d1b8fc6097fe4db41c&type=album" height = "600" width="1200">
 </p>
 ## Project Structure
 
