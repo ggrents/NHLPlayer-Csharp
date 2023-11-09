@@ -65,5 +65,8 @@ It implements various design patterns to provide flexibility, extensibility, and
       <img src="https://sun9-76.userapi.com/impg/Z13Pwx8F9MyapNqwSdBtavyfeEHRa2EJIFoPQw/LB92aXINjw8.jpg?size=1477x425&quality=96&sign=22ffdfd94e988f74cdcf1f2b103f8bfa&type=album" height = "600" width="1200">
       <img src="https://sun9-3.userapi.com/impg/3s_N_RNJj3GLdK2TISVwxII8NniV2kk4Ygx6Zg/p9xoahiUc_8.jpg?size=982x206&quality=96&sign=8c1fd67bc4cc94d1b8fc6097fe4db41c&type=album" height = "600" width="1200">
 </p>
-## Project Structure
 
+## Project Structure
+<p align="center">
+      <img src="https://sun9-34.userapi.com/impg/gcJ5pfy-gWvefvqi1YP7tdSa9dJN2SU0Btd7bw/idjoC3ruhaA.jpg?size=1113x859&quality=96&sign=f437607f458cc08d8b1f4972f1cfee2d&type=album" height = "858" width="1111">
+</p>
